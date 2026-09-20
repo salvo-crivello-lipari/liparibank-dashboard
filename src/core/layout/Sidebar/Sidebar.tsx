@@ -14,8 +14,20 @@ const menuItems: TMenuItem[] = [
     path: ROUTES.DASHBOARD,
   },
   {
-    label: 'Insurance',
-    path: ROUTES.INSURANCE,
+    label: 'Accounts',
+    path: ROUTES.ACCOUNTS,
+  },
+  {
+    label: 'Investments',
+    path: ROUTES.INVESTMENTS,
+  },
+  {
+    label: 'Policies',
+    path: ROUTES.POLICIES,
+  },
+  {
+    label: 'Admin',
+    path: ROUTES.ADMIN,
   },
 ]
 
