@@ -1,6 +1,5 @@
 import type { ReactElement } from 'react'
 import { RouterProvider } from 'react-router-dom'
-import './App.css'
 import { appRouter } from '@/core/constants/Routes/appRouter'
 
 function App(): ReactElement {

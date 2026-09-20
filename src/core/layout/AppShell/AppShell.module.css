@@ -1,24 +1,16 @@
-/* src/layouts/AppShell/AppShell.module.css */
-/* CSS Module: le classi sono locali al componente.
-   Nessun rischio di collisione con classi globali. */
-
 .appShell {
-  /* Full viewport height: la shell occupa tutto lo schermo */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Variabili CSS per il design system di LipariBank.
-     Le definiamo in :root per riutilizzarle ovunque */
-  background-color: var(--color-bg-primary, #f4f6f8);
 }
 
 .mainWrapper {
   display: flex;
-  flex: 1; /* Occupa tutto lo spazio verticale rimanente sotto l'header */
+  flex: 1;
 }
 
 .content {
   flex: 1;
-  padding: 2rem;
-  overflow-y: auto; /* Scroll solo nell'area contenuto, non nella sidebar */
+  padding: var(--ds-spacing-xl);
+  overflow-y: auto;
 }

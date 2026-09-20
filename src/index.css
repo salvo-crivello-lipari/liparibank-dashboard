@@ -1,20 +1,89 @@
 :root {
-  --bg: #ffffff;
-  --primary: #19c756;
-  --text-primary: #111111;
+  /* ================================ */
+  /* TYPO                             */
+  /* ================================ */
 
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
+  --ds-font-family-base: Roboto, sans-serif;
+  --ds-font-size-base: 1rem;
+
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-font-size-base);
+
+  /* ================================ */
+  /* SPACING                          */
+  /* ================================ */
+
+  --ds-spacing-xs: 0.25rem;
+  --ds-spacing-sm: 0.5rem;
+  --ds-spacing-md: 1rem;
+  --ds-spacing-lg: 1.5rem;
+  --ds-spacing-xl: 2rem;
+
+  /* ================================ */
+  /* RADIUS                           */
+  /* ================================ */
+
+  --ds-radius-sm: 0.25rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+
+  /* ================================ */
+  /* PALETTE                          */
+  /* ================================ */
+
+  --ds-color-primary: #00317d;
+  --ds-color-secondary: #4b5563;
+  --ds-color-brand: #19c756;
+
+  --ds-color-background: #ffffff;
+
+  --ds-color-surface-1: #f8f9fb;
+  --ds-color-surface-2: #f1f3f6;
+  --ds-color-surface-3: #e5e7eb;
+
+  --ds-color-text-primary: #111827;
+  --ds-color-text-secondary: #4b5563;
+  --ds-color-text-on-primary: #ffffff;
+  --ds-color-text-on-brand: #111827;
+
+  --ds-color-border: #d1d5db;
 }
 
 :root.dark {
-  --bg: #16171d;
-  --primary: #35de70;
-  --text-primary: #f3f4f6;
+  --ds-color-primary: #00317d;
+  --ds-color-secondary: #9ca3af;
+  --ds-color-brand: #35de70;
+
+  --ds-color-background: #111318;
+
+  --ds-color-surface-1: #181a20;
+  --ds-color-surface-2: #20232b;
+  --ds-color-surface-3: #2a2e38;
+
+  --ds-color-text-primary: #f3f4f6;
+  --ds-color-text-secondary: #9ca3af;
+  --ds-color-text-on-primary: #ffffff;
+  --ds-color-text-on-brand: #111318;
+
+  --ds-color-border: #374151;
+}
+
+/* ================================ */
+/* GLOBAL STYLE                     */
+/* ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text-primary);
+  background: var(--ds-color-background);
+  color: var(--ds-color-text-primary);
 }

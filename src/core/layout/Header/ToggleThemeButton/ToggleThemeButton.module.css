@@ -1,0 +1,38 @@
+.toggleBox {
+  display: flex;
+  gap: var(--ds-spacing-xs);
+  padding: var(--ds-spacing-xs);
+  border-radius: var(--ds-radius-md);
+  background: rgb(255 255 255 / 10%);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--ds-radius-sm);
+  background: transparent;
+  color: var(--ds-color-text-on-primary);
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.button:hover {
+  background: rgb(255 255 255 / 15%);
+}
+
+.button[aria-pressed='true'] {
+  background: var(--ds-color-text-on-primary);
+  color: var(--ds-color-primary);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--ds-color-text-on-primary);
+  outline-offset: 2px;
+}
