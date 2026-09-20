@@ -46,3 +46,12 @@ export const isNotBlankOrEmpty = <T>(
  */
 export const isNotNullOrUndefined = <T>(value: T | null | undefined): value is T =>
   !isNullOrUndefined(value)
+
+/**
+ * Pauses execution for the specified duration.
+ *
+ * @param ms - Delay duration in milliseconds, default:300ms
+ * @returns A promise resolved after the delay.
+ */
+export const sleep = (ms: number = 300): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms))

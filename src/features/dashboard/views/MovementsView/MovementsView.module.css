@@ -1,0 +1,6 @@
+.movementsViewBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-sm);
+  margin-top: var(--ds-spacing-xl);
+}

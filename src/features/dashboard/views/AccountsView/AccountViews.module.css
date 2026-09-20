@@ -1,0 +1,4 @@
+.accountsViewBox {
+  display: flex;
+  gap: var(--ds-spacing-lg);
+}

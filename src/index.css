@@ -47,6 +47,9 @@
   --ds-color-text-on-brand: #111827;
 
   --ds-color-border: #d1d5db;
+
+  --ds-color-success: #21a156;
+  --ds-color-danger: #ce3030;
 }
 
 :root.dark {

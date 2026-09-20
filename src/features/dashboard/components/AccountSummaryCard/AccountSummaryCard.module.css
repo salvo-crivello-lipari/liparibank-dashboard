@@ -1,0 +1,52 @@
+.card {
+  min-width: 20rem;
+  padding: var(--ds-spacing-lg);
+  border-radius: var(--ds-radius-md);
+  border-left: 4px solid transparent;
+  background: var(--ds-color-surface-2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-spacing-md);
+}
+
+.name {
+  margin: 0;
+}
+
+.iban {
+  margin: var(--ds-spacing-xs) 0 0;
+  opacity: 0.7;
+}
+
+.balance {
+  margin: var(--ds-spacing-xl) 0 0;
+  text-align: right;
+  font-size: larger;
+}
+
+.badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid currentColor;
+}
+
+.private {
+  border-left-color: var(--ds-color-primary);
+}
+
+.business {
+  border-left-color: var(--ds-color-brand);
+}
+
+.badgePrivate {
+  color: var(--ds-color-primary);
+}
+
+.badgeBusiness {
+  color: var(--ds-color-brand);
+}

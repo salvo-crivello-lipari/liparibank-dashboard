@@ -1,0 +1,50 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-spacing-md);
+  padding: var(--ds-spacing-md) var(--ds-spacing-lg);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface-2);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.date {
+  opacity: 0.7;
+  margin-top: var(--ds-spacing-xs);
+}
+
+.category {
+  padding: 0.125rem 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.amount {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.credit {
+  color: var(--ds-color-success);
+}
+
+.debit {
+  color: var(--ds-color-danger);
+}
+
+.neutral {
+  color: inherit;
+}

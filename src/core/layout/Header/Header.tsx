@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import styles from './Header.module.css'
-import ToggleThemeButton from '@/core/layout/Header/ToggleThemeButton/ToggleThemeButton'
+import { ToggleThemeButton } from '@/core/layout/Header/ToggleThemeButton/ToggleThemeButton'
 
 export const Header = (): ReactElement => {
   return (

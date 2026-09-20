@@ -7,4 +7,6 @@ export default abstract class CONFIG {
     LIGHT: 'light',
     DARK: 'dark',
   } as const
+
+  static readonly CURRENCY_LOCALE = 'it-IT'
 }

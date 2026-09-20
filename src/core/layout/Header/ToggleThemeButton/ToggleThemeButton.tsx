@@ -8,7 +8,7 @@ const THEME_ICONS: Record<string, string> = {
   [CONFIG.THEMES.DARK]: '☾',
 }
 
-function ToggleThemeButton(): ReactElement {
+export function ToggleThemeButton(): ReactElement {
   const { appTheme, applyTheme } = useTheme()
 
   return (
@@ -32,5 +32,3 @@ function ToggleThemeButton(): ReactElement {
     </div>
   )
 }
-
-export default ToggleThemeButton
