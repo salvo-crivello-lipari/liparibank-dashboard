@@ -1,0 +1,32 @@
+.sidebar {
+  width: 16rem;
+  min-height: 100%;
+  flex-shrink: 0;
+  background: var(--ds-color-surface-1);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-xs);
+  margin: 0;
+  padding: var(--ds-spacing-md);
+  list-style: none;
+}
+
+.link,
+.active {
+  display: block;
+  padding: var(--ds-spacing-sm) var(--ds-spacing-md);
+  border-radius: var(--ds-radius-md);
+  color: var(--ds-color-text-primary);
+  text-decoration: none;
+}
+
+.link:hover {
+  background: var(--ds-color-surface-2);
+}
+
+.active {
+  background: var(--ds-color-surface-2);
+}
