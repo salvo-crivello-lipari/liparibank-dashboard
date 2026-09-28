@@ -1,4 +1,11 @@
 export default abstract class CONFIG {
+  static readonly ERROR_NAMES = {
+    TECHNICAL: 'Technical Error',
+    NETWORK: 'Network Error',
+    AUTHENTICATION: 'Authentication Error',
+    ABORTED: 'Aborted',
+  }
+
   static readonly STORAGE_KEYS = {
     THEME: 'theme',
   }
