@@ -14,11 +14,11 @@ type TApiOptions<B = never> = {
 }
 
 type TUseApiCall = {
-  get: <R>(options: TApiOptions<never>) => Promise<TFetcherResponse<R>>
-  post: <B, R>(options: TApiOptions<B>) => Promise<TFetcherResponse<R>>
-  put: <B, R>(options: TApiOptions<B>) => Promise<TFetcherResponse<R>>
-  patch: <B, R>(options: TApiOptions<B>) => Promise<TFetcherResponse<R>>
-  delete: <R>(options: TApiOptions<never>) => Promise<TFetcherResponse<R>>
+  get: <R>(options: TApiOptions<never>) => Promise<R | null>
+  post: <B, R>(options: TApiOptions<B>) => Promise<R | null>
+  put: <B, R>(options: TApiOptions<B>) => Promise<R | null>
+  patch: <B, R>(options: TApiOptions<B>) => Promise<R | null>
+  delete: <R>(options: TApiOptions<never>) => Promise<R | null>
 }
 
 export function useApiCall(): TUseApiCall {
@@ -40,7 +40,7 @@ export function useApiCall(): TUseApiCall {
   }, [])
 
   const call = useCallback(
-    async <B, R>(method: THttpMethod, options: TApiOptions<B>): Promise<TFetcherResponse<R>> => {
+    async <B, R>(method: THttpMethod, options: TApiOptions<B>): Promise<R | null> => {
       const response = await fetcher<B, R>(options.url, {
         method,
         body: options.body,
@@ -50,7 +50,7 @@ export function useApiCall(): TUseApiCall {
 
       handleGlobalError(response, options.silent)
 
-      return response
+      return response.data
     },
     [handleGlobalError]
   )
