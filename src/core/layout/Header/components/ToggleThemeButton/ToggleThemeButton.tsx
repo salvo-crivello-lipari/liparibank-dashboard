@@ -2,11 +2,7 @@ import type { ReactElement } from 'react'
 import CONFIG from '@/core/config/config'
 import { useTheme } from '@/hooks/useTheme'
 import styles from './ToggleThemeButton.module.css'
-
-const THEME_ICONS: Record<string, string> = {
-  [CONFIG.THEMES.LIGHT]: '☀',
-  [CONFIG.THEMES.DARK]: '☾',
-}
+import { Moon, Sun } from 'lucide-react'
 
 export function ToggleThemeButton(): ReactElement {
   const { appTheme, applyTheme } = useTheme()
@@ -15,6 +11,7 @@ export function ToggleThemeButton(): ReactElement {
     <div role="group" aria-label="Theme" className={styles.toggleBox}>
       {Object.values(CONFIG.THEMES).map((theme) => {
         const isActive = theme === appTheme
+        const isLightMode = theme === CONFIG.THEMES.LIGHT
 
         return (
           <button
@@ -25,7 +22,7 @@ export function ToggleThemeButton(): ReactElement {
             aria-pressed={isActive}
             onClick={() => applyTheme(theme)}
           >
-            <span aria-hidden="true">{THEME_ICONS[theme]}</span>
+            {isLightMode ? <Sun aria-hidden /> : <Moon aria-hidden />}
           </button>
         )
       })}
