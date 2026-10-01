@@ -9,7 +9,7 @@
   position: absolute;
   z-index: 1000;
 
-  min-width: 180px;
+  min-width: 300px;
   max-width: calc(100vw - 2rem);
   max-height: calc(100vh - 2rem);
 
@@ -19,7 +19,7 @@
   border: 1px solid var(--ds-color-borders);
   border-radius: var(--ds-radius-lg);
 
-  background: var(--ds-color-surface-2);
+  background: var(--ds-color-surface-3);
   color: var(--ds-color-text-primary);
 }
 

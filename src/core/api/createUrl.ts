@@ -37,7 +37,7 @@ export function createUrl(baseUrl: string): TCreateUrl {
   function build(): string {
     const path = [baseUrl.replace(/\/+$/, ''), ...pathSegments].join('/')
     const queryString = queryParams.toString()
-    return queryString ? `${path}?${queryString}` : path
+    return queryString ? `${path}/?${queryString}` : path
   }
 
   const api: TCreateUrl = {

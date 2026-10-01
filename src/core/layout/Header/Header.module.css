@@ -34,3 +34,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-spacing-md);
+}

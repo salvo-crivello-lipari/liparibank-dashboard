@@ -1,0 +1,55 @@
+.notificationBadge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: var(--ds-color-danger);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.notificationList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notificationItem {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ds-color-border);
+  overflow-wrap: anywhere;
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationItem strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.notificationItem p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ds-color-text-secondary);
+}
+
+.notificationItem[data-read='false'] strong {
+  font-weight: 700;
+  color: var(--ds-color-primary);
+}
+
+.notificationItem[data-read='true'] {
+  opacity: 0.75;
+}
