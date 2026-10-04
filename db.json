@@ -8,6 +8,13 @@
       "iban": "IT68D0300203280000400162854"
     },
     {
+      "id": "ACC-003",
+      "name": "Conto Secondario",
+      "type": "PRIVATE",
+      "balance": 700,
+      "iban": "IT68F0300203280000400162850"
+    },
+    {
       "id": "ACC-002",
       "name": "Conto Business",
       "type": "BUSINESS",
@@ -121,6 +128,48 @@
       "firstName": "Admin",
       "lastName": "LipariBank",
       "role": "ADMIN"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NOTIF-001",
+      "userId": "USR-001",
+      "accountId": "ACC-001",
+      "title": "Accredito ricevuto",
+      "message": "Hai ricevuto un accredito di €2.500,00 su Conto Principale",
+      "type": "INFO",
+      "read": false,
+      "createdAt": "2025-03-15T09:12:00Z"
+    },
+    {
+      "id": "NOTIF-002",
+      "userId": "USR-001",
+      "accountId": "ACC-002",
+      "title": "Pagamento fornitore",
+      "message": "Addebito di €3.200,00 per Pagamento Fornitore Beta su Conto Business",
+      "type": "WARNING",
+      "read": false,
+      "createdAt": "2025-03-15T14:30:00Z"
+    },
+    {
+      "id": "NOTIF-003",
+      "userId": "USR-001",
+      "accountId": null,
+      "title": "Aggiornamento investimenti",
+      "message": "Il valore del tuo ETF MSCI World è aumentato dell'8,6% rispetto al prezzo d'acquisto",
+      "type": "SUCCESS",
+      "read": true,
+      "createdAt": "2025-03-16T08:00:00Z"
+    },
+    {
+      "id": "NOTIF-003",
+      "userId": "USR-ADM",
+      "accountId": null,
+      "title": "Aggiornamento investimenti",
+      "message": "Il valore del tuo ETF MSCI World è aumentato dell'8,6% rispetto al prezzo d'acquisto",
+      "type": "SUCCESS",
+      "read": true,
+      "createdAt": "2025-03-16T08:00:00Z"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

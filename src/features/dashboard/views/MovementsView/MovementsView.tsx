@@ -1,17 +1,19 @@
-import { mocks } from '@/dbMocks'
 import { MovementRow } from '@/features/dashboard/components/MovementsRow/MovementRow'
-import type { TMovement } from '@/types/db.types'
 import { type ReactElement } from 'react'
 import styles from './MovementsView.module.css'
-
-const movements = mocks.movements as TMovement[]
+import { useFetchMovements } from '@/hooks/service/useFetchMovements'
+import { isNotNullOrUndefined } from '@/shared/utils/utils'
 
 export function MovementsView(): ReactElement {
+  const { movements } = useFetchMovements()
+
   return (
     <div className={styles.movementsViewBox}>
-      {movements.map((movement) => {
-        return <MovementRow movement={movement} />
-      })}
+      <h2>Movimenti Recenti</h2>
+      {isNotNullOrUndefined(movements) &&
+        movements.map((movement) => {
+          return <MovementRow key={movement.id} movement={movement} />
+        })}
     </div>
   )
 }

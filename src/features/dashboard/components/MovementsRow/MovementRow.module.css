@@ -5,6 +5,12 @@
   padding: var(--ds-spacing-md) var(--ds-spacing-lg);
   border-radius: var(--ds-radius-md);
   background: var(--ds-color-surface-2);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.row:hover {
+  border-color: var(--ds-color-primary);
 }
 
 .info {

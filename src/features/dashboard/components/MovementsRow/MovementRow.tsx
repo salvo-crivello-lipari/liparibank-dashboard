@@ -8,12 +8,16 @@ export type TMovementRowProps = {
 }
 
 export function MovementRow({ movement }: TMovementRowProps): ReactElement {
-  const { description, date, amount, category } = movement
+  const { description, date, amount, category, id } = movement
 
   const amountClassName = amount > 0 ? styles.credit : amount < 0 ? styles.debit : styles.neutral
 
+  function handleMovementClick(): void {
+    console.log(`Movimento selezionato: ${id}`)
+  }
+
   return (
-    <div className={styles.row}>
+    <div className={styles.row} role="button" onClick={handleMovementClick}>
       <div className={styles.info}>
         <span className={styles.description}>{description}</span>
         <time className={styles.date} dateTime={date}>
