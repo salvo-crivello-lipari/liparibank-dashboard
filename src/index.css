@@ -32,8 +32,13 @@
   /* ================================ */
 
   --ds-color-primary: #00317d;
+  --ds-color-primary_hover: #00265f;
+
   --ds-color-secondary: #4b5563;
+  --ds-color-secondary_hover: #374151;
+
   --ds-color-brand: #19c756;
+  --ds-color-brand_hover: #16a948;
 
   --ds-color-background: #ffffff;
 
@@ -50,12 +55,18 @@
 
   --ds-color-success: #21a156;
   --ds-color-danger: #ce3030;
+  --ds-color-danger_hover: #a82424;
 }
 
 :root.dark {
   --ds-color-primary: #00317d;
+  --ds-color-primary_hover: #00429f;
+
   --ds-color-secondary: #9ca3af;
+  --ds-color-secondary_hover: #d1d5db;
+
   --ds-color-brand: #35de70;
+  --ds-color-brand_hover: #5ae889;
 
   --ds-color-background: #111318;
 
