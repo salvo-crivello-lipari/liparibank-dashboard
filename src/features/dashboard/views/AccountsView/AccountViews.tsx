@@ -1,17 +1,19 @@
-import { mocks } from '@/dbMocks'
-import { AccountSummaryCard } from '@/features/dashboard/components/AccountSummaryCard/AccountSummaryCard'
-import type { TAccount } from '@/types/db.types'
+import { useFetchAccounts } from '@/hooks/service/useFetchAccounts'
+import { isNotNullOrUndefined } from '@/shared/utils/utils'
 import { type ReactElement } from 'react'
+import { AccountBalanceCard } from '../../components/AccountBalanceCard/AccountBalanceCard'
 import styles from './AccountViews.module.css'
 
-const accounts = mocks.accounts as TAccount[]
-
 export function AccountViews(): ReactElement {
+  const { accounts, loading } = useFetchAccounts()
+
   return (
     <div className={styles.accountsViewBox}>
-      {accounts.map((account) => {
-        return <AccountSummaryCard account={account} />
-      })}
+      {!loading &&
+        isNotNullOrUndefined(accounts) &&
+        accounts.map((account) => {
+          return <AccountBalanceCard key={account.id} account={account} />
+        })}
     </div>
   )
 }

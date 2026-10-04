@@ -49,3 +49,16 @@ export type TUser = {
   lastName: string
   role: TUserRole
 }
+
+export type TNotificationType = 'INFO' | 'WARNING' | 'SUCCESS'
+
+export type TNotification = {
+  id: string
+  userId: string
+  accountId: string | null
+  title: string
+  message: string
+  type: TNotificationType
+  read: boolean
+  createdAt: string
+}
