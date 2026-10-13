@@ -43,14 +43,26 @@
   text-align: right;
 }
 
+.neutral {
+  color: inherit;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: var(--ds-color-surface-1);
+}
+
 .credit {
   color: var(--ds-color-success);
 }
 
 .debit {
   color: var(--ds-color-danger);
-}
-
-.neutral {
-  color: inherit;
 }
