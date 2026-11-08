@@ -1,16 +1,21 @@
 .appShell {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .mainWrapper {
   display: flex;
   flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .content {
   flex: 1;
+  min-width: 0;
+  min-height: 0;
   padding: var(--ds-spacing-xl);
   overflow-y: auto;
 }

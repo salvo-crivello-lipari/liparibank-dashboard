@@ -56,6 +56,11 @@
   --ds-color-success: #21a156;
   --ds-color-danger: #ce3030;
   --ds-color-danger_hover: #a82424;
+
+  /* Scrollbar */
+  --ds-color-scrollbar-track: var(--ds-color-surface-2);
+  --ds-color-scrollbar-thumb: #c1c7d0;
+  --ds-color-scrollbar-thumb-hover: #9ca3af;
 }
 
 :root.dark {
@@ -80,6 +85,11 @@
   --ds-color-text-on-brand: #111318;
 
   --ds-color-border: #374151;
+
+  /* Scrollbar */
+  --ds-color-scrollbar-track: var(--ds-color-surface-1);
+  --ds-color-scrollbar-thumb: #4b5563;
+  --ds-color-scrollbar-thumb-hover: #6b7280;
 }
 
 /* ================================ */
@@ -100,4 +110,33 @@ body {
   margin: 0;
   background: var(--ds-color-background);
   color: var(--ds-color-text-primary);
+}
+
+/* ================================ */
+/* SCROLLBAR                        */
+/* ================================ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ds-color-scrollbar-thumb) var(--ds-color-scrollbar-track);
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--ds-color-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--ds-color-scrollbar-thumb);
+  border-radius: 999px;
+  border: 2px solid var(--ds-color-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ds-color-scrollbar-thumb-hover);
 }
