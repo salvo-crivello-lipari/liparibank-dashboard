@@ -1,0 +1,45 @@
+.errorPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--ds-spacing-xl);
+  background: var(--ds-color-background);
+}
+
+.errorContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-spacing-md);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.errorCode {
+  color: var(--ds-color-danger);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.errorContent h1 {
+  margin: 0;
+  color: var(--ds-color-text-primary);
+  font-size: 1.75rem;
+}
+
+.errorContent p {
+  margin: 0;
+  color: var(--ds-color-text-secondary);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--ds-spacing-sm);
+  margin-top: var(--ds-spacing-md);
+}
