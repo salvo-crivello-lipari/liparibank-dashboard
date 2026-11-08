@@ -1,29 +1,52 @@
-import ROUTES from '@/core/constants/Routes/routes.const'
+import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const { DASHBOARD, INSURANCE } = ROUTES
+import ROUTES from '@/core/constants/Routes/routes.const'
 
 type TUseRedirection = {
+  openLoginPage: () => void
   openDashboardPage: () => void
-  openInsurancePage: () => void
+  openAccountsPage: () => void
+  openInvestmentsPage: () => void
+  openPoliciesPage: () => void
+  openAdminPage: () => void
 }
 
-/**
- * Navigation Utility to that simplify and centralized navigation actions.
- *
- * @returns {TUseRedirection}
- */
 function useRedirection(): TUseRedirection {
   const navigate = useNavigate()
 
-  const openDashboardPage = (): void => {
-    navigate(DASHBOARD, { replace: true })
-  }
-  const openInsurancePage = (): void => {
-    navigate(INSURANCE, { replace: true })
-  }
+  const openLoginPage = useCallback((): void => {
+    navigate(ROUTES.LOGIN, { replace: true })
+  }, [navigate])
 
-  return { openDashboardPage, openInsurancePage }
+  const openDashboardPage = useCallback((): void => {
+    navigate(ROUTES.DASHBOARD, { replace: true })
+  }, [navigate])
+
+  const openAccountsPage = useCallback((): void => {
+    navigate(ROUTES.ACCOUNTS, { replace: true })
+  }, [navigate])
+
+  const openInvestmentsPage = useCallback((): void => {
+    navigate(ROUTES.INVESTMENTS, { replace: true })
+  }, [navigate])
+
+  const openPoliciesPage = useCallback((): void => {
+    navigate(ROUTES.POLICIES, { replace: true })
+  }, [navigate])
+
+  const openAdminPage = useCallback((): void => {
+    navigate(ROUTES.ADMIN, { replace: true })
+  }, [navigate])
+
+  return {
+    openLoginPage,
+    openDashboardPage,
+    openAccountsPage,
+    openInvestmentsPage,
+    openPoliciesPage,
+    openAdminPage,
+  }
 }
 
 export default useRedirection

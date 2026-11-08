@@ -2,6 +2,9 @@ import { NavLink } from 'react-router-dom'
 import styles from './Sidebar.module.css'
 import type { ReactElement } from 'react'
 import ROUTES from '@/core/constants/Routes/routes.const'
+import useAuth from '@/core/context/authContext/useAuth'
+import useRedirection from '@/hooks/useRedirection'
+import Button from '@/shared/components/Button/Button'
 
 type TMenuItem = {
   label: string
@@ -32,6 +35,14 @@ const menuItems: TMenuItem[] = [
 ]
 
 export function Sidebar(): ReactElement {
+  const { logout } = useAuth()
+  const { openLoginPage } = useRedirection()
+
+  const handleLogout = (): void => {
+    logout()
+    openLoginPage()
+  }
+
   return (
     <aside className={styles.sidebar}>
       <nav aria-label="navigation">
@@ -48,6 +59,9 @@ export function Sidebar(): ReactElement {
           ))}
         </ul>
       </nav>
+      <div className={styles.footer}>
+        <Button label="Logout" variant="danger" onClick={handleLogout} />
+      </div>
     </aside>
   )
 }
